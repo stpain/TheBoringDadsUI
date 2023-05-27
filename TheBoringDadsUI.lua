@@ -52,7 +52,7 @@ function TheBoringDadsMixin:UpdateUI()
     self.content.gridview:UpdateLayout()
 
     for k, module in pairs(self.modules) do
-        if module.type == "frame" and module.UpdateLayout then
+        if module.UpdateLayout then
             module:UpdateLayout()
         end
     end
@@ -71,22 +71,23 @@ end
 
 function TheBoringDadsMixin:AddonModule_OnRegistered(module)
 
-    if self.modules[module.name] then
+    --DevTools_Dump(module.launcher)
+
+    if self.modules[module.launcher.name] then
         
         return
     end
     
-    if module.type == "frame" then
-        self.modules[module.name] = module;
+    if type(module.launcher) == "table" then
+        self.modules[module.launcher.name] = module;
         module:SetParent(self.content)
         module:SetAllPoints()
         module:Hide()
 
         self.content.gridview:Insert({
-            label = module.name,
-            icon = module.icon,
+            launcher = module.launcher,
             onMouseDown = function()
-                self:SelectModule(module.name)
+                self:SelectModule(module.launcher.name)
             end,
         })
     end

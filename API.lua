@@ -1,10 +1,14 @@
 local name, addon = ...;
 
+--[[
+    This section allows other addons to interact with the base UI
+]]
+
 --Public
 TheBoringDad = {}
 
+---Register a module
+---@param mod frame the frame to register
 function TheBoringDad:RegisterModule(mod)
-    if mod.name and mod.type then
-        addon:TriggerEvent("AddonModule_OnRegistered", mod)
-    end
+    addon:TriggerEvent("AddonModule_OnRegistered", mod)
 end

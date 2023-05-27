@@ -8,13 +8,13 @@ end
 
 function TheBoringDadsMenuGridviewItemMixin:SetDataBinding(binding)
 
-    self.label:SetText(binding.label)
+    self.label:SetText(binding.launcher.name)
 
-    if binding.icon then
-        if type(binding.icon) == "string" then
-            self.icon:SetAtlas(binding.icon, true)
+    if binding.launcher.icon then
+        if type(binding.launcher.icon) == "string" then
+            self.icon:SetAtlas(binding.launcher.icon, true)
         else
-            self.icon:SetTexture(binding.icon)
+            self.icon:SetTexture(binding.launcher.icon)
         end
     end
 
