@@ -1,0 +1,122 @@
+<Ui>
+    <Frame name="TheBoringDadsMenuGridviewItemTemplate" mixin="TheBoringDadsMenuGridviewItemMixin" virtual="true">
+        <Layers>
+            <Layer level="HIGHLIGHT">
+                <Texture parentKey="highlight">
+                    <Color r="0.6" g="0.6" b="0.6" a="0.1"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="2" y="-2"/>
+                        <Anchor point="BOTTOMRIGHT" x="-2" y="2"/>
+                    </Anchors>
+                </Texture>
+            </Layer>
+            <!-- <Layer level="BACKGROUND">
+                <Texture parentKey="background">
+                    <Color r="0.6" g="0.6" b="0.6" a="0.1"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="0" y="0"/>
+                        <Anchor point="BOTTOMRIGHT" x="0" y="0"/>
+                    </Anchors>
+                </Texture>
+            </Layer> -->
+            <Layer level="ARTWORK">
+                <Line thickness="1">
+                    <Color r="0.75" g="0.75" b="0.75" a="0.85"/>
+                    <StartAnchor point="TOPLEFT" x="2" y="-2"/>
+                    <EndAnchor point="BOTTOMLEFT" x="2" y="2"/>
+                </Line>
+                <Line thickness="1">
+                    <Color r="0.75" g="0.75" b="0.75" a="0.85"/>
+                    <StartAnchor point="TOPLEFT" x="2" y="-2"/>
+                    <EndAnchor point="TOPRIGHT" x="-2" y="-2"/>
+                </Line>
+                <Line thickness="1">
+                    <Color r="0.75" g="0.75" b="0.75" a="0.85"/>
+                    <StartAnchor point="BOTTOMLEFT" x="2" y="2"/>
+                    <EndAnchor point="BOTTOMRIGHT" x="-2" y="2"/>
+                </Line>
+                <Line thickness="1">
+                    <Color r="0.75" g="0.75" b="0.75" a="0.85"/>
+                    <StartAnchor point="TOPRIGHT" x="-2" y="-2"/>
+                    <EndAnchor point="BOTTOMRIGHT" x="-2" y="2"/>
+                </Line>
+                <Texture parentKey="icon">
+                    <Anchors>
+                        <Anchor point="CENTER" x="0" y="0"/>
+                    </Anchors>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString parentKey="label" inherits="GameFontNormal">
+                    <Color r="1" g="1" b="1"/>
+                    <Size y="20"/>
+                    <Anchors>
+                        <Anchor point="BOTTOMLEFT" x="0" y="9"/>
+                        <Anchor point="BOTTOMRIGHT" x="0" y="9"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </Frame>
+
+    <Frame name="TheBoringDadsBasicListviewItemTemplate" mixin="TheBoringDadsBasicListviewItemMixin" virtual="true">
+        <Layers>
+            <Layer level="HIGHLIGHT">
+                <Texture parentKey="highlight">
+                    <Color r="0.6" g="0.6" b="0.6" a="0.1"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="0" y="0"/>
+                        <Anchor point="BOTTOMRIGHT" x="0" y="0"/>
+                    </Anchors>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString parentKey="label" inherits="GameFontNormal">
+                    <Color r="1" g="1" b="1"/>
+                    <Anchors>
+                        <Anchor point="LEFT" x="0" y="0"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </Frame>
+
+    <!-- <Frame name="TheBoringDadsListviewItemTemplate" mixin="TheBoringDadsBasicListviewItemMixin" enableHyperlinks="true" virtual="true">
+        <Layers>
+            <Layer level="HIGHLIGHT">
+                <Texture parentKey="highlight">
+                    <Color r="0.6" g="0.6" b="0.6" a="0.1"/>
+                    <Anchors>
+                        <Anchor point="TOPLEFT" x="0" y="0"/>
+                        <Anchor point="BOTTOMRIGHT" x="0" y="0"/>
+                    </Anchors>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString parentKey="label" inherits="GameFontNormal">
+                    <Color r="1" g="1" b="1"/>
+                    <Anchors>
+                        <Anchor point="LEFT" x="0" y="-8"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </Frame> -->
+
+    <CheckButton name="TheBoringDadsCheckButton" inherits="ChatConfigCheckButtonTemplate" virtual="true">
+        <CheckedTexture atlas="orderhalltalents-done-checkmark"/>
+        <Size x="24" y="24"/>
+        <HitRectInsets left="0" right="-10"/>
+        <Layers>
+            <Layer level="OVERLAY">
+                <FontString parentKey="label" inherits="GameFontNormal" justifyH="LEFT">
+                    <Color r="1" g="1" b="1" a="1"/>
+                    <!-- <Size x="280" y="26"/> -->
+                    <Anchors>
+                        <Anchor point="LEFT" x="24" y="0"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </CheckButton>
+</Ui>
